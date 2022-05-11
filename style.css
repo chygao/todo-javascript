@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", Serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 550px;
+    width: 100%;
+    margin: 120px auto;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+}
+
+
+/* header */
+
+.header {
+    width: 550px;
+    height: 200px;
+    background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+    position: relative;
+}
+
+.delete {
+    position: absolute;
+    right:20px;
+    top: 20px;
+
+}
+
+.material-icons.fresh-icon-size{
+    font-size: 48px;
+    color: #fff;
+}
+
+.material-icons.fresh-icon-size:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+
+.delete .delete-text {
+    visibility: hidden;
+    width: 80px;
+    color: #fff;
+    text-align: center;
+
+    /* Position the tooltip */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.delete:hover .delete-text {
+    visibility: visible;
+    text-shadow: 1px 3px 5px #000;
+}
+
+.app-name {
+    position: absolute;
+    left: 200px;
+    top: 40%;
+    font-size: 24px;
+    color: #fff;
+}
+
+#date{
+    position: absolute;
+    top: 80%;
+    left: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* input area */
+
+.todoInput{
+    display: flex;
+    height: 55px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.todoInput input{
+    width: 100%;
+    height: 100%;
+    border:  1px solid #497BE8;
+    font-size:  18px;
+    border-radius:  3px;
+    padding-left:  15px;
+    outline: none;
+}
+
+.todoInput button{
+    width: 45px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #497BE8;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius:  3px;
+    margin-left: 8px;
+    
+    opacity: 0.6;
+    pointer-events: auto;
+}
+
+.todoInput button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.material-icons.button-icon-size{
+    font-size: 45px;
+}
+
+/* list part */
+
+.listContent{
+    margin-top: 20px;
+    padding: 0 20px 10px 20px;
+    overflow-y: auto;
+    max-height: 430px;
+}
+
+.listContent::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px; 
+} 
+  
+.listContent::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+} 
+
+.listContent .item{
+    list-style: none;
+    font-size: 20px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listContent .item:last-child{
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.item .text{
+    width: 450px;
+    margin-left: 5px; 
+    margin-right: 6px;
+    word-wrap: break-word;
+}
+
+.item .ckeck-icon:hover{
+    cursor: pointer;
+}
+
+.item .clear-icon{
+    color: red;
+}
+
+.item .clear-icon:hover{
+    cursor: pointer;
+}
+
+.item .done-color{
+    color: #6eb200;
+}
+
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
